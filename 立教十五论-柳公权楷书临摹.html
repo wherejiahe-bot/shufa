@@ -34,7 +34,7 @@
   .toolbar input[type=range]{width:110px;}
   .toolbar .pageLabel{color:#6b5d45;letter-spacing:2px;min-width:92px;text-align:center;}
   #pages{padding:8px 12px 0;}
-  .page{display:none;position:relative;background-color:var(--paper);background-image:var(--paper-tex);max-width:780px;margin:22px auto;padding:44px 40px 40px;border:1px solid #e3d8bf;box-shadow:0 3px 14px rgba(120,90,40,.10);border-radius:3px;}
+  .page{display:none;position:relative;background-color:var(--paper);background-image:var(--paper-tex);max-width:900px;margin:22px auto;padding:44px 40px 40px;border:1px solid #e3d8bf;box-shadow:0 3px 14px rgba(120,90,40,.10);border-radius:3px;}
   .page::before{content:'';position:absolute;inset:3px;pointer-events:none;background-image:var(--meander-t),var(--meander-b),var(--meander-l),var(--meander-r);background-repeat:repeat-x,repeat-x,repeat-y,repeat-y;background-position:left top,left bottom,left top,right top;background-size:16px 16px;}
   .page::after{content:'';position:absolute;inset:3px;pointer-events:none;background-image:var(--meander-c1),var(--meander-c2),var(--meander-c3),var(--meander-c4);background-repeat:no-repeat;background-position:left top,right top,left bottom,right bottom;background-size:16px 16px;}
   .page.active{display:block;}
@@ -48,7 +48,7 @@
   .col{display:flex;flex-direction:column;}
   .ch{
     display:flex;align-items:center;justify-content:center;
-    width:var(--cell);height:var(--cell);
+    width:calc(var(--cell) * 1.5);height:var(--cell);
     line-height:1;font-size:calc(var(--cell) * .78);
     color:var(--trace);
     border-left:1px solid var(--rule);
@@ -127,7 +127,7 @@
     font-family:"LXGW WenKai","KaiTi",serif;
   }
   /* ============ 正文 ============ */
-  main{max-width:900px;margin:26px auto 0;padding:0 16px;}
+  main{max-width:980px;margin:26px auto 0;padding:0 16px;}
   section{margin-bottom:56px;}
   .lun-title{
     font-size:30px;letter-spacing:10px;margin-bottom:20px;
@@ -141,7 +141,7 @@
   .col{display:flex;flex-direction:column;}
 .ch{
     display:flex;align-items:center;justify-content:center;
-    width:var(--cell);height:var(--cell);
+    width:calc(var(--cell) * 1.5);height:var(--cell);
     line-height:1;font-size:calc(var(--cell) * .8);
     color:var(--trace);
     border-left:1px solid var(--rule);
