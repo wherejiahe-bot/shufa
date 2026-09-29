@@ -10,8 +10,14 @@
     --ink:#26221c;
     --cell:62px;
     --paper-tex:repeating-linear-gradient(90deg, rgba(146,112,58,0.07) 0, rgba(146,112,58,0.07) 0.4px, transparent 0.4px, transparent 1.5px), repeating-linear-gradient(0deg, rgba(146,112,58,0.07) 0, rgba(146,112,58,0.07) 0.4px, transparent 0.4px, transparent 1.5px), repeating-linear-gradient(45deg, rgba(146,112,58,0.03) 0, rgba(146,112,58,0.03) 0.4px, transparent 0.4px, transparent 2px), repeating-linear-gradient(-45deg, rgba(146,112,58,0.03) 0, rgba(146,112,58,0.03) 0.4px, transparent 0.4px, transparent 2px), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.1'/%3E%3C/svg%3E");
-    --meander:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='14'%3E%3Cpath d='M0 10.5H24M19 10.5V2.5H5.5V8H12.5V5.5' fill='none' stroke='%23b6955c' stroke-width='1.4'/%3E%3C/svg%3E");
-    --meander-v:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='24'%3E%3Cpath d='M3.5 0V24M3.5 5H11.5V18.5H6.5V9.5' fill='none' stroke='%23b6955c' stroke-width='1.4'/%3E%3C/svg%3E");
+    --meander-t:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20'%3E%3Cpath d='M0 2H20M3 2V18H18V7H8V12H13' fill='none' stroke='%23b6895a' stroke-width='1.5'/%3E%3C/svg%3E");
+    --meander-b:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20'%3E%3Cpath d='M0 18H20M3 18V2H18V13H8V8H13' fill='none' stroke='%23b6895a' stroke-width='1.5'/%3E%3C/svg%3E");
+    --meander-l:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20'%3E%3Cpath d='M2 0V20M2 3H18V18H7V12H12V7' fill='none' stroke='%23b6895a' stroke-width='1.5'/%3E%3C/svg%3E");
+    --meander-r:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20'%3E%3Cpath d='M18 0V20M18 17H2V2H13V12H8V7' fill='none' stroke='%23b6895a' stroke-width='1.5'/%3E%3C/svg%3E");
+    --meander-c1:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20'%3E%3Crect width='20' height='20' fill='%23f7f1e3'/%3E%3Cpath d='M20 2H2V20M14 2V14H2' fill='none' stroke='%23b6895a' stroke-width='1.5'/%3E%3C/svg%3E");
+    --meander-c2:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20'%3E%3Crect width='20' height='20' fill='%23f7f1e3'/%3E%3Cpath d='M0 2H18V20M6 2V14H18' fill='none' stroke='%23b6895a' stroke-width='1.5'/%3E%3C/svg%3E");
+    --meander-c3:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20'%3E%3Crect width='20' height='20' fill='%23f7f1e3'/%3E%3Cpath d='M2 0V18H20M2 6H14V18' fill='none' stroke='%23b6895a' stroke-width='1.5'/%3E%3C/svg%3E");
+    --meander-c4:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20'%3E%3Crect width='20' height='20' fill='%23f7f1e3'/%3E%3Cpath d='M18 0V18H0M18 6H6V18' fill='none' stroke='%23b6895a' stroke-width='1.5'/%3E%3C/svg%3E");
   }
   *{margin:0;padding:0;box-sizing:border-box;}
   body{
@@ -29,7 +35,8 @@
   .toolbar .pageLabel{color:#6b5d45;letter-spacing:2px;min-width:92px;text-align:center;}
   #pages{padding:8px 12px 0;}
   .page{display:none;position:relative;background-color:var(--paper);background-image:var(--paper-tex);max-width:780px;margin:22px auto;padding:44px 40px 40px;border:1px solid #e3d8bf;box-shadow:0 3px 14px rgba(120,90,40,.10);border-radius:3px;}
-  .page::before{content:'';position:absolute;inset:3px;pointer-events:none;background-image:var(--meander),var(--meander),var(--meander-v),var(--meander-v);background-repeat:repeat-x,repeat-x,repeat-y,repeat-y;background-position:left top,left bottom,left top,right top;background-size:auto 14px,auto 14px,14px auto,14px auto;}
+  .page::before{content:'';position:absolute;inset:3px;pointer-events:none;background-image:var(--meander-t),var(--meander-b),var(--meander-l),var(--meander-r);background-repeat:repeat-x,repeat-x,repeat-y,repeat-y;background-position:left top,left bottom,left top,right top;background-size:16px 16px;}
+  .page::after{content:'';position:absolute;inset:3px;pointer-events:none;background-image:var(--meander-c1),var(--meander-c2),var(--meander-c3),var(--meander-c4);background-repeat:no-repeat;background-position:left top,right top,left bottom,right bottom;background-size:16px 16px;}
   .page.active{display:block;}
   .title-page{text-align:center;}
   .title-wrap{padding:40px 10px;}
